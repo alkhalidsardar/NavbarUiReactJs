@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+}
+:root {
+  --db: rgb(1, 0, 41);
+  --lb: rgb(65, 230, 255);
+}
+.menu-icon {
+  display: none;
+}
+.navbar {
+  height: auto;
+  background-color: var(--db);
+  position: relative;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+}
+h1 {
+  color: white;
+}
+span {
+  color: var(--lb);
+}
+
+.nav-elements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.nav-elements ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin-right: 35px;
+}
+.nav-elements ul a {
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+.nav-elements ul li i {
+  font-size: 25px;
+  color: white;
+  margin-right: 7px;
+}
+
+.nav-elements ul li a::after {
+  content: "";
+  width: 0%;
+  background-color: white;
+  height: 3px;
+  display: flex;
+  transition: 0.5s;
+}
+.nav-elements ul li a:hover::after {
+  width: 100%;
+}
+.nav-elements ul a.active {
+  color: var(--lb);
+}
+
+/*=========================================== media ===============================================================*/
+
+@media (max-width: 700px) {
+  .container {
+    padding: 5.5vw;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    z-index: 4;
+  }
+
+  .nav-elements {
+    position: absolute;
+    width: 0px;
+    height: 100vh;
+    overflow: hidden;
+    right: 0%;
+    top: 0;
+    transition: all 0.3s ease-in;
+  }
+  .nav-elements.active {
+    width: 200px;
+    background-color: var(--db);
+    transition: 0.8s;
+  }
+  .nav-elements ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    padding-left: 20px;
+  }
+  .nav-elements ul li {
+    margin-right: auto;
+    margin-top: 22px;
+  }
+}
