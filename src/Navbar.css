@@ -1,14 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 
+/* styles.css */
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: white;
+  background-color: var(--blue);
+
+  
 }
 :root {
   --db: rgb(1, 0, 41);
   --lb: rgb(65, 230, 255);
+  --textwhite: white;
+  --textblack: black;
+  --blue: #2b2a33;
 }
 .menu-icon {
   display: none;
@@ -23,13 +31,42 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 25px 40px;
+  
 }
 h1 {
-  color: white;
+  color: var(--textwhite);
+  margin-right: 20px;
+ 
 }
 span {
   color: var(--lb);
 }
+.firsthalf{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*======================================================================pages======================================================================================*/
+h2 {
+  font-size: 5vh;
+  text-align: center;
+  color: var(--textwhite);
+  margin-bottom: 5vh;
+}
+.homediv {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin: 10vh;
+}
+.homediv i{
+  color: var(--textwhite);
+}
+
+
+
+
 
 .nav-elements ul {
   display: flex;
@@ -46,19 +83,19 @@ span {
 .nav-elements ul a {
   font-size: 25px;
   font-weight: 600;
-  color: white;
+  color: var(--textwhite);
   text-decoration: none;
 }
 .nav-elements ul li i {
   font-size: 25px;
-  color: white;
+  color: var(--textwhite);
   margin-right: 7px;
 }
 
 .nav-elements ul li a::after {
   content: "";
   width: 0%;
-  background-color: white;
+  background-color: var(--textwhite);
   height: 3px;
   display: flex;
   transition: 0.5s;
@@ -79,7 +116,7 @@ span {
   .menu-icon {
     display: block;
     cursor: pointer;
-    color: white;
+    color: var(--textwhite);
     font-size: 35px;
     z-index: 4;
   }
