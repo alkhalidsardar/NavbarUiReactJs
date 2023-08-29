@@ -63,11 +63,17 @@ margin: 10vh;
 .homediv i{
   color: var(--textwhite);
 }
+/*======================================================================DarkMode======================================================================================*/
 
-
-
-
-
+.switch i{
+  font-size: 33px;
+  cursor: pointer;
+  align-self: center;
+}
+.switch i svg {
+  fill: var(--textwhite);
+}
+/*=================================================================================DarkMode==================================================*/
 .nav-elements ul {
   display: flex;
   justify-content: space-between;
